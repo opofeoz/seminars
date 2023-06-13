@@ -63,8 +63,8 @@
 // int num = Convert.ToInt32(Console.ReadLine());
 // if (num >= 100 && num < 1000 || num <= -100 && num > -1000)
 // {
-//     System.Console.WriteLine($"Первая цифра числа {num} -> {num / 100}");
-// System.Console.WriteLine($"Вторая цифра числа {num} -> {(num / 10) % 10}");
+//     //System.Console.WriteLine($"Первая цифра числа {num} -> {num / 100}");
+//     //System.Console.WriteLine($"Вторая цифра числа {num} -> {(num / 10) % 10}");
 //     System.Console.WriteLine($"Последняя цифра числа {num} -> {num % 10}"); 
 // }
 // else
