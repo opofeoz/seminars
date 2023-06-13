@@ -91,6 +91,37 @@
 
 
 
+// class Program
+// {
+//     static void Main(string[] args)
+//     {
+//         System.Console.WriteLine("Введите дату ->");
+//         int DayWee = int.Parse(Console.ReadLine());
+//         bool isWeek = WeeK(DayWee);
+//         if (isWeek)
+//         {
+//             System.Console.WriteLine("Да, это выходной");
+//         }
+//         else
+//         {
+//             System.Console.WriteLine("Нет, это рабочий день");
+//         }
+//         System.Console.ReadKey();
+//     }
+//     static bool WeeK(int DayWee)
+//     {
+//         if (DayWee == 6 || DayWee == 7)
+//         {
+//             return true;
+//         }
+//         else
+//         {
+//             return false;
+//         }
+//     }
+// }
+
+
 
 
 
