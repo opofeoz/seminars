@@ -57,9 +57,13 @@
 //     {
 //         System.Console.WriteLine($"Число {num1} является квадратом числа {num2}");
 //     }
+//     else if (num2 == num1 * num1)
+//     {
+//         System.Console.WriteLine($"Число {num2} является квадратом числа {num1}");
+//     }
 //     else
 //     {
-//         System.Console.WriteLine($"Число {num1} неявляется квадратом числа {num2}");
+//         System.Console.WriteLine($" НЕ одно из чисел не является квадратом друг друга ");
 //     }
 // }
 // System.Console.Write("Введите первое число ");
