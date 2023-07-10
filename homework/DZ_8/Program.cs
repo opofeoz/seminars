@@ -152,75 +152,69 @@
 // 18 20
 // 15 18
 
-int rows = ReadInt("Введите количество строк: ");
-int columns = ReadInt("Введите количество столбцов: ");
-int[,] array = new int[rows, columns];
-int[,] secondArray = new int[rows, columns];
-int[,] resultArray = new int[rows, columns];
+// int rows = ReadInt("Введите количество строк: ");
+// int columns = ReadInt("Введите количество столбцов: ");
+// int[,] array = new int[rows, columns];
+// int[,] secondArray = new int[rows, columns];
+// int[,] resultArray = new int[rows, columns];
 
-FillArrayRandom(array);
-PrintArray2D(array);
+// Create2DArray(array);
+// Print2DArray(array);
 
-Console.WriteLine();
+// Console.WriteLine();
 
-FillArrayRandom(secondArray);
-PrintArray2D(secondArray);
+// Create2DArray(secondArray);
+// Print2DArray(secondArray);
 
-Console.WriteLine();
+// Console.WriteLine();
 
-if (array.GetLength(0) != secondArray.GetLength(1))
-{
-    Console.WriteLine(" Нельзя перемножить ");
-    return;
-}
-for (int i = 0; i < array.GetLength(0); i++)
-{
-    for (int j = 0; j < secondArray.GetLength(1); j++)
-    {
-        resultArray[i, j] = 0;
-        for (int k = 0; k < array.GetLength(1); k++)
-        {
-            resultArray[i, j] += array[i, k] * secondArray[k, j];
-        }
-    }
-}
+// if (array.GetLength(0) != secondArray.GetLength(1))
+// {
+//     Console.WriteLine(" Нельзя перемножить ");
+//     return;
+// }
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < secondArray.GetLength(1); j++)
+//     {
+//         resultArray[i, j] = 0;
+//         for (int k = 0; k < array.GetLength(1); k++)
+//         {
+//             resultArray[i, j] += array[i, k] * secondArray[k, j];
+//         }
+//     }
+// }
 
-PrintArray2D(resultArray);
+// Print2DArray(resultArray);
 
+// int ReadInt(string message)
+// {
+//     Console.Write(message);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
 
+// void Create2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 10);
+//         }
+//     }
+// }
 
-// Функция ввода
-int ReadInt(string message)
-{
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
-
-// Функция заполнения массива рандомными числами от 1 до 9
-void FillArrayRandom(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            array[i, j] = new Random().Next(1, 10);
-        }
-    }
-}
-
-// Функция вывода двумерного массива в терминал 
-void PrintArray2D(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write($"{array[i, j]} ");
-        }
-        Console.WriteLine();
-    }
-}
-
+// void Print2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($"{array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
 
 
 // Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел.
@@ -231,9 +225,85 @@ void PrintArray2D(int[,] array)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
+
+// int[,,] array3D = new int[2, 2, 2];
+// Create3DArray(array3D);
+// Print3DArray(array3D);
+
+// void Print3DArray(int[,,] array)
+// {
+//     for (int i = 0; i < array3D.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array3D.GetLength(1); j++)
+//         {
+//             Console.WriteLine();
+//             for (int k = 0; k < array3D.GetLength(2); k++)
+//             {
+//                 Console.Write($"{array3D[i, j, k]}({i},{j},{k}) ");
+//             }
+//         }
+//     }
+// }
+
+// void Create3DArray(int[,,] array)
+// {
+//     int count = 10;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < array.GetLength(2); k++)
+//             {
+//                 array[k, i, j] += count;
+//                 count += 3;
+//             }
+//         }
+//     }
+// }
+
+
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 // Например, на выходе получается вот такой массив:
 // 01 02 03 04
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
+
+
+// int len = 4;
+// int[,] arraySpiral = new int[len, len];
+// CreateArraySpiral(arraySpiral, len);
+// PrintArray(arraySpiral);
+
+// void CreateArraySpiral(int[,] array, int n)
+// {
+//     int i = 0, j = 0;
+//     int value = 1;
+//     for (int e = 0; e < n * n; e++)
+//     {
+//         int k = 0;
+//         do { array[i, j++] = value++; } while (++k < n - 1);
+//         for (k = 0; k < n - 1; k++) array[i++, j] = value++;
+//         for (k = 0; k < n - 1; k++) array[i, j--] = value++;
+//         for (k = 0; k < n - 1; k++) array[i--, j] = value++;
+//         ++i; ++j;
+//         n = n < 2 ? 0 : n - 2;
+//     }
+// }
+
+// void PrintArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (array[i, j] < 10)
+//             {
+//                 Console.Write("0" + array[i, j]);
+//                 Console.Write(" ");
+//             }
+//             else Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
